@@ -1,0 +1,60 @@
+python-requests-unixsocket (0.2.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 21 Oct 2019 10:19:02 +0200
+
+python-requests-unixsocket (0.2.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Removed non-case-sensitive-url-cmp.patch applied upstream.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 23 Sep 2019 17:43:30 +0200
+
+python-requests-unixsocket (0.1.5-4) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Use team+openstack@tracker.debian.org as maintainer
+  * Use debhelper-compat instead of debian/compat.
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Daniel Baumann ]
+  * Updating copyright format url.
+  * Updating maintainer field.
+  * Running wrap-and-sort -bast.
+  * Removing gbp.conf, not used anymore or should be specified in the
+    developers dotfiles.
+  * Updating standards version to 4.1.0.
+
+  [ Thomas Goirand ]
+  * Removed Python 2 support (Closes: #938142).
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 14 Sep 2019 17:50:31 +0200
+
+python-requests-unixsocket (0.1.5-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * Bumped debhelper compat version to 10
+
+  [ Ondřej Kobližek ]
+  * Non case sensitive url comparison in tests (Closes: #848654)
+
+ -- Ondřej Kobližek <koblizeko@gmail.com>  Mon, 19 Dec 2016 15:00:29 +0100
+
+python-requests-unixsocket (0.1.5-2) unstable; urgency=medium
+
+  * Standards-Version is 3.9.8 now (no change)
+  * d/rules: Changed UPSTREAM_GIT protocol to https
+  * d/copyright: Changed source URL to https protocol
+  * d/s/options: extend-diff-ignore of .gitreview
+  * d/control: Using OpenStack's Gerrit as VCS URLs.
+
+ -- Ondřej Nový <novy@ondrej.org>  Sat, 09 Apr 2016 19:31:04 +0200
+
+python-requests-unixsocket (0.1.5-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #817052)
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 07 Mar 2016 23:31:15 +0800
