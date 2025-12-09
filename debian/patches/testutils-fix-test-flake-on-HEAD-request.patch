@@ -1,0 +1,17 @@
+Description: testutils: fix test flake on HEAD request
+Author: Dan Bungert <daniel.bungert@canonical.com>
+Bug-Debian: https://bugs.debian.org/1064926
+Forwarded: https://github.com/msabramo/requests-unixsocket/pull/71
+Last-Update: 2024-04-29
+
+--- python-requests-unixsocket-0.3.0.orig/requests_unixsocket/testutils.py
++++ python-requests-unixsocket-0.3.0/requests_unixsocket/testutils.py
+@@ -51,6 +51,8 @@ class WSGIApp:
+             ('X-Requested-Query-String', environ['QUERY_STRING']),
+             ('X-Requested-Path', environ['PATH_INFO'])]
+         body_bytes = b'Hello world!'
++        if environ["REQUEST_METHOD"] == "HEAD":
++            body_bytes = b''
+         start_response(status_text, response_headers)
+         logger.debug(
+             'WSGIApp.__call__: Responding with '
