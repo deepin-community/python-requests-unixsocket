@@ -1,3 +1,45 @@
+python-requests-unixsocket (0.3.0-6) unstable; urgency=medium
+
+  * Switch to pybuild (Closes: #1090605).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 18 Dec 2024 23:07:54 +0100
+
+python-requests-unixsocket (0.3.0-5) unstable; urgency=medium
+
+  * Add requests-2.32.2.patch, thanks to Colin Watson <cjwatson@debian.org>
+    (Closes: #1073393).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 26 Aug 2024 17:02:36 +0200
+
+python-requests-unixsocket (0.3.0-4) unstable; urgency=medium
+
+  * Apply Ubuntu patch (Closes: #1063892):
+    - 0001-Inherit-HTTPConnection-through-urllib3.connection-no.patch
+  * Add testutils-fix-test-flake-on-HEAD-request.patch (Closes: #1064926).
+  * Add autopkgtest, thanks to Olivier Gayot <olivier.gayot@canonical.com>
+    (Closes: #1064017).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 29 Apr 2024 15:10:08 +0200
+
+python-requests-unixsocket (0.3.0-3) unstable; urgency=medium
+
+  * Cleans better (Closes: #1048401).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 22 Aug 2023 09:40:33 +0200
+
+python-requests-unixsocket (0.3.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 24 Mar 2022 10:48:39 +0100
+
+python-requests-unixsocket (0.3.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Removed do-not-run-tests-with--pep8.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 15 Feb 2022 16:44:47 +0100
+
 python-requests-unixsocket (0.2.0-2) unstable; urgency=medium
 
   * Uploading to unstable.

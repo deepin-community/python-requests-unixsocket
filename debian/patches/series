@@ -1,1 +1,3 @@
-do-not-run-tests-with--pep8.patch
+0001-Inherit-HTTPConnection-through-urllib3.connection-no.patch
+testutils-fix-test-flake-on-HEAD-request.patch
+requests-2.32.2.patch

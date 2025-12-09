@@ -1,0 +1,19 @@
+Description: adapters: fix for requests 2.32.2+
+Author: Simon Deziel <simon.deziel@canonical.com>
+Origin: other, https://github.com/msabramo/requests-unixsocket/pull/72
+Bug-Debian: https://bugs.debian.org/1073393
+Last-Update: 2024-08-16
+
+--- python-requests-unixsocket-0.3.0.orig/requests_unixsocket/adapters.py
++++ python-requests-unixsocket-0.3.0/requests_unixsocket/adapters.py
+@@ -58,6 +58,10 @@ class UnixAdapter(HTTPAdapter):
+             pool_connections, dispose_func=lambda p: p.close()
+         )
+ 
++    # Fix for requests 2.32.2+: https://github.com/psf/requests/pull/6710
++    def get_connection_with_tls_context(self, request, verify, proxies=None, cert=None):
++        return self.get_connection(request.url, proxies)
++
+     def get_connection(self, url, proxies=None):
+         proxies = proxies or {}
+         proxy = proxies.get(urlparse(url.lower()).scheme)

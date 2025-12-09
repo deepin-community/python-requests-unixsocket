@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -efu
+
+python3_all="$(py3versions -s 2>/dev/null)"
+
+cp -r requests_unixsocket/tests "$AUTOPKGTEST_TMP/"
+cd "$AUTOPKGTEST_TMP"
+
+for py in $python3_all; do
+    echo "=== $py ==="
+    $py -m pytest --verbose 2>&1
+done
